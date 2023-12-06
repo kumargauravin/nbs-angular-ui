@@ -13,6 +13,7 @@ Run `ng generate component component-name` to generate a new component. You can 
 ## Build and Production run with Express
 
 Run `npm build` to build the project. The build artifacts will be stored in the `dist/` directory.
+
 Run `npm serve:ssr:nbs-ui`, Port is 4000. `http://localhost:4200/` for initial release /vbg/dashboard, /, /pages/dashboard all paths will goto dashboard.
 Note: Expecting SRE team to have a NGINX before application container while deploying to control configs if possible. Do a proxy-pass to localhost:4000.
 

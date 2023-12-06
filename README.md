@@ -4,15 +4,17 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 
 ## Development server
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+Run `npm start` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
 
 ## Code scaffolding
 
 Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
 
-## Build
+## Build and Production run with Express
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+Run `npm build` to build the project. The build artifacts will be stored in the `dist/` directory.
+Run `npm serve:ssr:nbs-ui`, Port is 4000. `http://localhost:4200/` for initial release /vbg/dashboard, /, /pages/dashboard all paths will goto dashboard.
+Note: Expecting SRE team to have a NGINX before application container while deploying to control configs if possible. Do a proxy-pass to localhost:4000.
 
 ## Running unit tests
 

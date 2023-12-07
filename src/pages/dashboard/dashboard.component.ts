@@ -17,18 +17,20 @@ interface CardSettings {
 })
 export class DashboardComponent implements OnDestroy {
   dataGroup:string = "";
+  applicationSSRParameters:any = {};
 
   constructor(private route: ActivatedRoute,
     @Optional() @Inject('parameters') public parameters: any,
     private readonly transferState: TransferState
     ) {
-      console.log("Parameters from Server", parameters);
+      console.log("Parameters from Server", parameters, transferState);
+      this.applicationSSRParameters = parameters;
   }
 
   ngOnInit() {
     this.route.queryParams
     .subscribe((params: any) => {
-      console.log("Parameters available to dashboard", params); // { dg: "nbs2bill-ss" }
+      console.log("Query parameters available to dashboard", params); // { dg: "nbs2bill-ss" }
       this.dataGroup = params['dg'];
     }
   );  }

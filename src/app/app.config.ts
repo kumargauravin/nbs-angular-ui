@@ -8,7 +8,7 @@ export const routes: Routes = [
       .then(m => m.PagesModule),
   },
   { path: '', redirectTo: 'pages/dashboard', pathMatch: 'full' },
-  { path: 'vbg/dashboard', redirectTo: 'pages/dashboard' },
+  { path: 'vbg', redirectTo: 'pages/dashboard' },
   { path: '**', redirectTo: 'pages/404' },
 ];
 import { provideClientHydration } from '@angular/platform-browser';
